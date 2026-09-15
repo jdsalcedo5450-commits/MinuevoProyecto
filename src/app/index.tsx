@@ -12,7 +12,7 @@ function OpcionMenu({
  titulo,
  descripcion,
  onPress,
- isSmall = false, // 💡 Propiedad para aplicar el diseño pequeño si es necesario
+ isSmall = false, 
 }: {
  icono: string;
  titulo: string;
@@ -82,7 +82,7 @@ export default function Inicio() {
  </View>
  <Text style={styles.seccionTitulo}>Explorar Coffee House</Text>
  
- {/* BOTÓN NORMAL COMPLETO */}
+ {}
  <OpcionMenu
  icono="📝"
  titulo="Formulario"
@@ -90,7 +90,7 @@ export default function Inicio() {
  onPress={() => router.push("/formulario")}
  />
 
- {/* CONTENEDOR PARA LOS TRES BOTONES SEGUIDOS Y ALINEADOS */}
+ {}
  <View style={styles.gridContainer}>
      <OpcionMenu
      icono="☕"
@@ -106,7 +106,7 @@ export default function Inicio() {
      onPress={() => router.push("/contacto")}
      isSmall={true}
      />
-     {/* Transformado a OpcionMenu para que quede alineado y del mismo tamaño que Galería y Contacto */}
+     {}
      <OpcionMenu
      icono="📝"
      titulo="Café del día"
