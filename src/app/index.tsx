@@ -1,24 +1,26 @@
 import { useRouter } from "expo-router";
 import {
- Image,
- Pressable,
- ScrollView,
- StyleSheet,
- Text,
- View,
+    Image,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
 function OpcionMenu({
  icono,
  titulo,
  descripcion,
  onPress,
+ isSmall = false, // 💡 Propiedad para aplicar el diseño pequeño si es necesario
 }: {
  icono: string;
  titulo: string;
  descripcion: string;
  onPress: () => void;
+ isSmall?: boolean;
 }) { return (
- <Pressable style={styles.card} onPress={onPress}>
+ <Pressable style={isSmall ? styles.cardSmall : styles.card} onPress={onPress}>
  <View style={styles.iconoCaja}>
  <Text style={styles.icono}>{icono}</Text>
  </View>
@@ -26,7 +28,7 @@ function OpcionMenu({
  <Text style={styles.cardTitulo}>{titulo}</Text>
  <Text style={styles.cardDescripcion}>{descripcion}</Text>
  </View>
- <Text style={styles.flecha}>›</Text>
+ {!isSmall && <Text style={styles.flecha}>›</Text>}
  </Pressable>
  );
 }
@@ -38,7 +40,7 @@ export default function Inicio() {
  <View style={styles.hero}>
  <Image
  source={{
- uri: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+ uri: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d4/d0/7f/photo0jpg.jpg?w=1100&h=1100&s=1",
  }}
  style={styles.imagenHero}
  />
@@ -79,39 +81,41 @@ export default function Inicio() {
  </View>
  </View>
  <Text style={styles.seccionTitulo}>Explorar Coffee House</Text>
+ 
+ {/* BOTÓN NORMAL COMPLETO */}
  <OpcionMenu
  icono="📝"
  titulo="Formulario"
  descripcion="Registra tus datos y tu preferencia de café."
  onPress={() => router.push("/formulario")}
  />
- <OpcionMenu
- icono="☕"
- titulo="Galería de cafés"
- descripcion="Explora imágenes de cafés, métodos y preparaciones."
- onPress={() => router.push("/imagenes")}
- />
- <OpcionMenu
- icono="📝"
- titulo="Contacto"
- descripcion="Consulta la información de nuestra cafetería."
- onPress={() => router.push("/contacto")}
- />
- {/* RECOMENDACIÓN */}
- <View style={styles.destacado}>
- <View style={styles.destacadoIcono}>
- <Text style={styles.destacadoEmoji}>📝</Text>
+
+ {/* CONTENEDOR PARA LOS TRES BOTONES SEGUIDOS Y ALINEADOS */}
+ <View style={styles.gridContainer}>
+     <OpcionMenu
+     icono="☕"
+     titulo="Galería"
+     descripcion="Explora imágenes."
+     onPress={() => router.push("/imagenes")}
+     isSmall={true}
+     />
+     <OpcionMenu
+     icono="📝"
+     titulo="Contacto"
+     descripcion="Información básica."
+     onPress={() => router.push("/contacto")}
+     isSmall={true}
+     />
+     {/* Transformado a OpcionMenu para que quede alineado y del mismo tamaño que Galería y Contacto */}
+     <OpcionMenu
+     icono="📝"
+     titulo="Café del día"
+     descripcion="Cappuccino suave."
+     onPress={() => {}}
+     isSmall={true}
+     />
  </View>
- <View style={styles.destacadoInfo}>
- <Text style={styles.destacadoTitulo}>
- Café del día
- </Text>
- <Text style={styles.destacadoTexto}>
- Prueba un cappuccino suave con notas de vainilla
- y un toque de canela.
- </Text>
- </View>
- </View>
+
  <Text style={styles.footer}>
  Coffee House · Desarrollo Móvil</Text>
  </ScrollView>
@@ -120,7 +124,7 @@ export default function Inicio() {
 const styles = StyleSheet.create({
  container: {
  flexGrow: 1,
- backgroundColor: "#FFF9F5",
+ backgroundColor: "hsla(205, 61%, 28%, 0.58)",
  padding: 18,
  },
  hero: {
@@ -140,7 +144,7 @@ const styles = StyleSheet.create({
  right: 0,
  bottom: 0,
  padding: 22,
- backgroundColor: "rgba(92, 53, 38, 0.76)",
+ backgroundColor: "hsla(221, 49%, 32%, 0.76)",
  },
  etiqueta: {
  color: "#FFE7EF",
@@ -156,7 +160,7 @@ const styles = StyleSheet.create({
  marginBottom: 6,
  },
  subtitulo: {
- color: "#FFF1EA",
+ color: "#eaffed",
  fontSize: 14,
  lineHeight: 21,
  },
@@ -224,6 +228,12 @@ const styles = StyleSheet.create({
  color: "#5B3A2D",
  marginBottom: 14,
  },
+ gridContainer: {
+ flexDirection: "row",
+ justifyContent: "space-between",
+ width: "100%",
+ marginBottom: 14,
+ },
  card: {
  backgroundColor: "#FFFFFF",
  borderRadius: 20,
@@ -235,6 +245,19 @@ const styles = StyleSheet.create({
  borderColor: "#F1DDD6",
  elevation: 2,
  },
+ cardSmall: {
+ backgroundColor: "#FFFFFF",
+ borderRadius: 16,
+ padding: 10,
+ flexDirection: "column",
+ alignItems: "center",
+ justifyContent: "center",
+ borderWidth: 1,
+ borderColor: "#F1DDD6",
+ elevation: 2,
+ width: "31%",
+ height: 155,
+ },
  iconoCaja: {
  width: 56,
  height: 56,
@@ -242,24 +265,27 @@ const styles = StyleSheet.create({
  backgroundColor: "#FBE7ED",
  justifyContent: "center",
  alignItems: "center",
- marginRight: 14,
  },
  icono: {
  fontSize: 25,
  },
  cardInfo: {
  flex: 1,
+ alignItems: "center",
  },
  cardTitulo: {
- fontSize: 17,
+ fontSize: 14,
  fontWeight: "bold",
  color: "#5B3A2D",
+ marginTop: 6,
  marginBottom: 4,
+ textAlign: "center",
  },
  cardDescripcion: {
  color: "#84675A",
- fontSize: 13,
- lineHeight: 18,
+ fontSize: 11,
+ lineHeight: 14,
+ textAlign: "center",
  },
  flecha: {
  fontSize: 30,color: "#C97C8E",

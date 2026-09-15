@@ -1,17 +1,18 @@
 import { Stack } from "expo-router";
+
 export default function Layout() {
  return (
  <Stack
  screenOptions={{
  headerStyle: {
- backgroundColor: "#C96A8B",
+ backgroundColor: "#AEC6CF", // 🩵 Azul pastel para la barra superior
  },
- headerTintColor: "#ffffff",
+ headerTintColor: "#2C5E7A", // 💙 Azul oscuro suave para el texto del título (Inicio, Formulario, etc.)
  headerTitleStyle: {
  fontWeight: "bold",
  },
  contentStyle: {
- backgroundColor: "#FFF7FA",
+ backgroundColor: "#F0F4F8", // 🤍 Azul grisáceo muy claro/pastel para el fondo de las pantallas
  },
  }}
  >
