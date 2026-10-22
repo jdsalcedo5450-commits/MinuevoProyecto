@@ -49,7 +49,7 @@ export default function Registro() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>☕</Text>
+      <Text style={styles.logo}>🧋</Text>
       <Text style={styles.titulo}>Crear cuenta</Text>
 
       <TextInput
@@ -85,11 +85,11 @@ export default function Registro() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", padding: 24, backgroundColor: "#FFF8FB" },
+  container: { flex: 1, justifyContent: "center", padding: 24, backgroundColor: "#EBF3F9" },
   logo: { fontSize: 56, textAlign: "center" },
-  titulo: { fontSize: 28, fontWeight: "bold", color: "#6B4234", textAlign: "center", marginBottom: 24 },
-  input: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E5C4CF", borderRadius: 14, padding: 14, marginBottom: 14 },
-  boton: { backgroundColor: "#C87591", padding: 15, borderRadius: 14, alignItems: "center" },
+  titulo: { fontSize: 28, fontWeight: "bold", color: "#1D3557", textAlign: "center", marginBottom: 24 },
+  input: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#BDD5EA", borderRadius: 14, padding: 14, marginBottom: 14 },
+  boton: { backgroundColor: "#4EA8DE", padding: 15, borderRadius: 14, alignItems: "center" },
   botonTexto: { color: "#FFFFFF", fontWeight: "bold" },
-  enlace: { color: "#6B4234", textAlign: "center", marginTop: 18, fontWeight: "600" },
+  enlace: { color: "#457B9D", textAlign: "center", marginTop: 18, fontWeight: "600" },
 });

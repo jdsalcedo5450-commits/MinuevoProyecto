@@ -101,7 +101,7 @@ export default function Inicio() {
       <Text style={styles.seccionTitulo}>Explorar Coffee House</Text>
       
       <OpcionMenu
-        icono="📝"
+        icono="🥤"
         titulo="Formulario"
         descripcion="Registra tus datos y tu preferencia de café."
         onPress={() => router.push("/formulario" as any)}
@@ -109,14 +109,14 @@ export default function Inicio() {
 
       <View style={styles.gridContainer}>
         <OpcionMenu
-          icono="☕"
+          icono="🥐"
           titulo="Galería"
           descripcion="Explora imágenes."
           onPress={() => router.push("/imagenes" as any)}
           isSmall={true}
         />
         <OpcionMenu
-          icono="📝"
+          icono="🧋"
           titulo="Contacto"
           descripcion="Información básica."
           onPress={() => router.push("/contacto" as any)}
@@ -146,7 +146,7 @@ export default function Inicio() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "hsla(205, 61%, 28%, 0.58)",
+    backgroundColor: "#EBF3F9", // Fondo azul pastel claro consistente
     padding: 18,
   },
   hero: {
@@ -166,10 +166,10 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     padding: 22,
-    backgroundColor: "hsla(221, 49%, 32%, 0.76)",
+    backgroundColor: "rgba(29, 53, 87, 0.65)", // Superposición translúcida usando tu azul marino
   },
   etiqueta: {
-    color: "#FFE7EF",
+    color: "#EBF3F9",
     fontSize: 11,
     fontWeight: "bold",
     letterSpacing: 1.8,
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   subtitulo: {
-    color: "#eaffed",
+    color: "#FFFFFF",
     fontSize: 14,
     lineHeight: 21,
   },
@@ -199,18 +199,18 @@ const styles = StyleSheet.create({
   saludoTitulo: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#5B3A2D",
+    color: "#1D3557", // Azul marino profundo
   },
   saludoTexto: {
     marginTop: 3,
-    color: "#8B6A5D",
+    color: "#457B9D", // Azul grisáceo intermedio
     fontSize: 14,
   },
   avatar: {
     width: 50,
     height: 50,
     borderRadius: 25,
-    backgroundColor: "#F8DDE7",
+    backgroundColor: "#E6F4FE", // Detalle azul pastel sutil en vez de rosa
     justifyContent: "center",
     alignItems: "center",
   },
@@ -232,24 +232,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   resumenNumero: {
-    color: "#B86F7E",
+    color: "#4EA8DE", // Azul cielo pastel brillante
     fontSize: 18,
     fontWeight: "bold",
   },
   resumenTexto: {
-    color: "#8B6A5D",
+    color: "#457B9D", // Azul grisáceo intermedio
     fontSize: 12,
     marginTop: 3,
   },
   separador: {
     width: 1,
     height: 35,
-    backgroundColor: "#F1D7CF",
+    backgroundColor: "#BDD5EA", // Línea divisoria en azul suave
   },
   seccionTitulo: {
     fontSize: 21,
     fontWeight: "bold",
-    color: "#5B3A2D",
+    color: "#1D3557", // Azul marino profundo
     marginBottom: 14,
   },
   gridContainer: {
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#F1DDD6",
+    borderColor: "#BDD5EA", // Bordes de tarjeta en azul suave
     elevation: 2,
   },
   cardSmall: {
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#F1DDD6",
+    borderColor: "#BDD5EA", // Bordes de tarjeta en azul suave
     elevation: 2,
     width: "31%",
     height: 155,
@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 18,
-    backgroundColor: "#FBE7ED",
+    backgroundColor: "#E6F4FE", // Fondos de icono en azul claro pastel
     justifyContent: "center",
     alignItems: "center",
   },
@@ -300,25 +300,25 @@ const styles = StyleSheet.create({
   cardTitulo: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#5B3A2D",
+    color: "#1D3557", // Azul marino profundo
     marginTop: 6,
     marginBottom: 4,
     textAlign: "center",
   },
   cardDescripcion: {
-    color: "#84675A",
+    color: "#457B9D", // Azul grisáceo intermedio
     fontSize: 11,
     lineHeight: 14,
     textAlign: "center",
   },
   flecha: {
     fontSize: 30,
-    color: "#C97C8E",
+    color: "#4EA8DE", // Flecha indicadora en azul cielo pastel
     marginLeft: 8,
   },
   // 4. AGREGAR ESTILOS DEL BOTÓN SOLICITADOS POR LA GUÍA (Paso 12.4)
   botonCerrar: {
-    backgroundColor: "#8E3B46",
+    backgroundColor: "#4EA8DE", // Botón principal unificado en tu azul cielo característico
     padding: 14,
     borderRadius: 14,
     alignItems: "center",
@@ -330,7 +330,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     textAlign: "center",
-    color: "#9B7A6E",
+    color: "#457B9D", // Azul grisáceo suave para el pie de página
     fontSize: 12,
     marginTop: 24,
     marginBottom: 12,
