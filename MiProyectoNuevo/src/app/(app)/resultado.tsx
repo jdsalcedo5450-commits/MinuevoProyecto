@@ -1,14 +1,8 @@
-import { useEffect, useState } from "react";
-import {
-  ActivityIndicator,
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-import { supabase } from "../../lib/supabase";
+import { useState, useEffect } from "react";
+import { View, Text, StyleSheet, FlatList, ActivityIndicator } from "react-native";
+import { supabase } from "../../lib/supabase"; 
 
-export default function ResultadoScreen() {
+export default function Registros() {
   const [registros, setRegistros] = useState<any[]>([]);
   const [cargando, setCargando] = useState(true);
 
@@ -52,7 +46,8 @@ export default function ResultadoScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>☕ MIEMBROS </Text>
+      <Text style={styles.titulo}>Registros Existentes</Text>
+      <Text style={styles.subtitulo}>Lista de clientes en la base de datos</Text>
 
       {registros.length === 0 ? (
         <Text style={styles.vacioText}>No hay registros guardados en la tabla.</Text>
@@ -106,6 +101,12 @@ const styles = StyleSheet.create({
     textAlign: "center", 
     marginBottom: 20, 
     marginTop: 10 
+  },
+  subtitulo: {
+    textAlign: "center",
+    color: "#4A5568",
+    marginBottom: 20,
+    marginTop: -10,
   },
   card: { 
     backgroundColor: "#FFFFFF", 

@@ -54,7 +54,7 @@ export default function Inicio() {
       <View style={styles.hero}>
         <Image
           source={{
-            uri: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d4/d0/7f/photo0jpg.jpg?w=1100&h=1100&s=1",
+            uri: "https://img.magnific.com/fotos-premium/conjuga-imagen-bulliciosa-cafeteria-lunes-azul-baristas-creando-arte-latte-azul_950002-499862.jpg?semt=ais_hybrid&w=740&q=80",
           }}
           style={styles.imagenHero}
         />
@@ -146,7 +146,7 @@ export default function Inicio() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#EBF3F9", // Fondo azul pastel claro consistente
+    backgroundColor: "#EBF3F9",
     padding: 18,
   },
   hero: {
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     padding: 22,
-    backgroundColor: "rgba(29, 53, 87, 0.65)", // Superposición translúcida usando tu azul marino
+    backgroundColor: "rgba(29, 53, 87, 0.65)",
   },
   etiqueta: {
     color: "#EBF3F9",
@@ -199,18 +199,18 @@ const styles = StyleSheet.create({
   saludoTitulo: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#1D3557", // Azul marino profundo
+    color: "#1D3557",
   },
   saludoTexto: {
     marginTop: 3,
-    color: "#457B9D", // Azul grisáceo intermedio
+    color: "#457B9D",
     fontSize: 14,
   },
   avatar: {
     width: 50,
     height: 50,
     borderRadius: 25,
-    backgroundColor: "#E6F4FE", // Detalle azul pastel sutil en vez de rosa
+    backgroundColor: "#E6F4FE",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -232,24 +232,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   resumenNumero: {
-    color: "#4EA8DE", // Azul cielo pastel brillante
+    color: "#4EA8DE",
     fontSize: 18,
     fontWeight: "bold",
   },
   resumenTexto: {
-    color: "#457B9D", // Azul grisáceo intermedio
+    color: "#457B9D",
     fontSize: 12,
     marginTop: 3,
   },
   separador: {
     width: 1,
     height: 35,
-    backgroundColor: "#BDD5EA", // Línea divisoria en azul suave
+    backgroundColor: "#BDD5EA",
   },
   seccionTitulo: {
     fontSize: 21,
     fontWeight: "bold",
-    color: "#1D3557", // Azul marino profundo
+    color: "#1D3557",
     marginBottom: 14,
   },
   gridContainer: {
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#BDD5EA", // Bordes de tarjeta en azul suave
+    borderColor: "#BDD5EA",
     elevation: 2,
   },
   cardSmall: {
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#BDD5EA", // Bordes de tarjeta en azul suave
+    borderColor: "#BDD5EA",
     elevation: 2,
     width: "31%",
     height: 155,
@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 18,
-    backgroundColor: "#E6F4FE", // Fondos de icono en azul claro pastel
+    backgroundColor: "#E6F4FE",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -300,25 +300,24 @@ const styles = StyleSheet.create({
   cardTitulo: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#1D3557", // Azul marino profundo
+    color: "#1D3557",
     marginTop: 6,
     marginBottom: 4,
     textAlign: "center",
   },
   cardDescripcion: {
-    color: "#457B9D", // Azul grisáceo intermedio
+    color: "#457B9D",
     fontSize: 11,
     lineHeight: 14,
     textAlign: "center",
   },
   flecha: {
     fontSize: 30,
-    color: "#4EA8DE", // Flecha indicadora en azul cielo pastel
+    color: "#4EA8DE",
     marginLeft: 8,
   },
-  // 4. AGREGAR ESTILOS DEL BOTÓN SOLICITADOS POR LA GUÍA (Paso 12.4)
   botonCerrar: {
-    backgroundColor: "#4EA8DE", // Botón principal unificado en tu azul cielo característico
+    backgroundColor: "#4EA8DE",
     padding: 14,
     borderRadius: 14,
     alignItems: "center",
@@ -326,13 +325,14 @@ const styles = StyleSheet.create({
   },
   textoCerrar: {
     color: "#FFFFFF",
+    fontSize: 16,
     fontWeight: "bold",
   },
   footer: {
-    textAlign: "center",
-    color: "#457B9D", // Azul grisáceo suave para el pie de página
+    color: "#457B9D",
     fontSize: 12,
-    marginTop: 24,
-    marginBottom: 12,
+    textAlign: "center",
+    marginTop: 30,
+    marginBottom: 20,
   },
 });
